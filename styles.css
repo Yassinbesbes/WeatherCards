@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 250px;
+    height:350px ;
+    background-color: rgb(98, 237, 249);
+    border-radius: 20px;
+    border: none;
+
+}
+.parte-two{
+    width: 50px;
+    height:50px ;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 85.8%;
+    left: 80%; 
+    border-top-left-radius: 20px;
+
+}
+
+.rect0{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(240, 55, 55);
+    position: relative;
+    top: 239.8px;
+    left: 96%;
+    border-bottom-right-radius: 40px;
+    box-shadow: 2px 3px 1px 1px white;
+    background: transparent;
+
+}
+.rect1{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(240, 55, 55);
+    position: relative;
+    left: 180px;
+    top: 270.5px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 5px 3px 0px 3px white;
+    background: transparent;
+}
+
+.cercle {
+    background-color: rgb(106, 238, 49);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 205px;
+    top: 225px;
+}
