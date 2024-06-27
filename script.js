@@ -14,12 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error('City not found');
             }
             const data = await response.json();
+            //date 
+            const timestamp = data.dt;
+            const date = new Date(timestamp * 1000);
+            const Day = date.toLocaleDateString('en-US', { weekday: 'long' });
+            const Month = date.toLocaleDateString('en-US', { month: 'long' });            
+            const day = ('0' + date.getDate()).slice(-2);
+            const hours = ('0' + date.getHours()).slice(-2);
+            const minutes = ('0' + date.getMinutes()).slice(-2);
 
             document.querySelector(".city").innerHTML = data.name;
             document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
             document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
             document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+            document.querySelector(".date").innerHTML=Day.slice(0,3) + ", "+ Month + " "+day  ;
+            document.querySelector(".hour").innerHTML=hours;
+            document.querySelector(".minutes").innerHTML=minutes;
 
+            
             switch (data.weather[0].main) {
                 case "Clouds":
                     weatherIcon.src = "images/clouds.png";
@@ -50,8 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("City not found, please try again");
         }
     }
-
     searchBtn.addEventListener("click", () => {
-        checkWeather(searchBox.value);
+       
+        console.log( checkWeather(searchBox.value));
+
     });
 });
