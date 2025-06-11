@@ -2,6 +2,8 @@
 
 <h1>Weather App Project</h1>
 
+![image](https://github.com/user-attachments/assets/eaeb5861-880a-4a01-84c2-915e46582f6b)
+
 <p>This project is a simple weather application using JavaScript, HTML, and CSS, fetching data from the OpenWeatherMap API.</p>
 
 <!-- Installation -->
